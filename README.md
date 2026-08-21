@@ -22,7 +22,7 @@ a trusted library.
 | Day | Algorithm | Status |
 |---|---|---|
 | 1 | Linear Regression (Gradient Descent) | ✅ Done |
-| 2 | Logistic Regression | 🔜 |
+| 2 | Logistic Regression — Sigmoid & Cross-Entropy Loss | ✅ |
 | 3 | Regularization (L1/L2) | 🔜 |
 | 4 | Decision Trees | 🔜 |
 | 5 | Applied project: Credit Risk Prediction | 🔜 |
