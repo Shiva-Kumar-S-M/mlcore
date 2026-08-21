@@ -57,10 +57,28 @@ the learning rate is too high — see `PROGRESS.md` for details.
 
 ![results](plots/day1_linear_regression_results.png)
 
-Run it yourself:
+
+## Day 2 — Logistic Regression
+
+Extended Day 1's linear model into a binary classifier by adding a
+sigmoid activation and switching to binary cross-entropy loss.
+Benchmarked against sklearn's `LogisticRegression` on synthetic,
+linearly separable data.
+
+**Result:**
+
+
+The small gap vs. sklearn is expected — sklearn applies L2
+regularization by default, which our implementation doesn't yet.
+Day 3 adds this and closes the gap.
+
+**Convergence and decision boundary:**
+
+![results](plots/day2_logistic_regression_results.png)
+
+### Run it locally
 ```bash
-cd day1_linear_regression
-pip install -r ../requirements.txt
+cd day2_logistic_regression
 python train_and_compare.py
-python -m pytest test_linear_regression.py -v
+python -m pytest test_logistic_regression.py -v
 ```
