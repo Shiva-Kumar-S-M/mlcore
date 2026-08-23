@@ -59,3 +59,34 @@ function suited to classification.
 
 **Next (Day 3):** Regularization (L1/L2) and bias-variance tradeoff --
 will explain the small weight gap seen today.
+
+
+## Day 3 — Regularization (L1/L2) ✅
+
+**Built:**
+- `regularized_regression.py`: extends Day 1's gradient descent with
+  L1 and L2 penalty terms added to the gradient.
+- `overfitting_demo.py`: deliberately overfits with degree-12
+  polynomial features, then shows L2 fixing it at different lambda
+  strengths.
+- `test_regularization.py`: verifies L2 shrinks weights, L1 induces
+  sparsity.
+
+**Key results:**
+- No regularization: high train R2, much lower test R2 (overfitting).
+- L2 lambda=20: train/test R2 gap shrinks significantly, curve
+  smooths out.
+
+**Concepts learned:**
+- Bias-variance tradeoff made concrete: too flexible = overfits
+  (low bias, high variance); too constrained = underfits (high
+  bias, low variance).
+- L2 shrinks weights smoothly; L1 can zero them out entirely
+  (built-in feature selection).
+- Why bias term is never regularized.
+- This explained the Day 2 weight gap vs sklearn -- sklearn
+  regularizes by default.
+
+**Next (Day 4):** Decision Trees -- a completely different way to
+fit data (splits, not gradients), and why tree-based models
+overfit/underfit differently than linear models.
