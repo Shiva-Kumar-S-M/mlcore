@@ -90,3 +90,36 @@ will explain the small weight gap seen today.
 **Next (Day 4):** Decision Trees -- a completely different way to
 fit data (splits, not gradients), and why tree-based models
 overfit/underfit differently than linear models.
+
+## Day 4 — Decision Trees ✅
+
+**Built:**
+- `decision_tree.py`: DecisionTreeScratch using entropy and
+  information gain for greedy recursive splitting.
+- `train_and_compare.py`: benchmarks against sklearn's
+  DecisionTreeClassifier, visualizes the blocky decision boundary.
+- `depth_experiment.py`: sweeps max_depth from 1 to 20, plots
+  train vs test accuracy to show overfitting emerging.
+- `test_decision_tree.py`: 4 unit tests covering entropy edge cases
+  and tree correctness.
+
+**Key results:**
+- Matched sklearn's accuracy closely on synthetic classification data.
+- Depth experiment showed classic overfitting signature: train
+  accuracy climbs toward 100% with depth, test accuracy peaks then
+  plateaus/drops.
+
+**Concepts learned:**
+- Trees use a fundamentally different optimization approach than
+  Days 1-3: greedy search over splits, not gradient descent.
+- Entropy measures disorder; Information Gain measures how much a
+  split reduces it.
+- Decision boundaries are blocky/axis-aligned (vs. linear models'
+  straight lines) because each split only tests one feature.
+- max_depth is the tree equivalent of Day 3's regularization
+  lambda -- both control model complexity and the bias-variance
+  tradeoff, just through different mechanisms.
+
+**Next (Day 5):** Apply everything so far to a real dataset
+(credit risk prediction) and compare all models side by side on
+real, messy data.
