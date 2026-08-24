@@ -79,11 +79,13 @@ Day 3 adds this and closes the gap.
 
 ## Day 3 — Regularization (L1/L2)
 
-Extended the gradient descent from Day 1 to include L1 and L2 penalty
-terms, then deliberately overfit a degree-12 polynomial model to show
-regularization fixing it.
+As regularization strength increases, the train/test gap shrinks —
+the model gives up some training fit in exchange for generalizing
+better to unseen data. This is the bias-variance tradeoff made visible.
 
-**Result (Train R² vs Test R² at increasing regularization strength):**
+**Overfitting vs. regularized fits:**
+
+![results](plots/day3_overfitting_regularization.png)
 
 ### Run it locally
 ```bash
