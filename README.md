@@ -23,7 +23,7 @@ a trusted library.
 |---|---|---|
 | 1 | Linear Regression (Gradient Descent) | ✅ Done |
 | 2 | Logistic Regression — Sigmoid & Cross-Entropy Loss | ✅ |
-| 3 | Regularization (L1/L2) | 🔜 |
+| 3 | Regularization — L1 / L2, Bias-Variance Tradeoff | ✅ |
 | 4 | Decision Trees | 🔜 |
 | 5 | Applied project: Credit Risk Prediction | 🔜 |
 | 6 | Neural Network from scratch (backprop) | 🔜 |
