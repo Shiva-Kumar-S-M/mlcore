@@ -76,6 +76,15 @@ Day 3 adds this and closes the gap.
 
 ![results](plots/day2_logistic_regression_results.png)
 
+
+## Day 3 — Regularization (L1/L2)
+
+Extended the gradient descent from Day 1 to include L1 and L2 penalty
+terms, then deliberately overfit a degree-12 polynomial model to show
+regularization fixing it.
+
+**Result (Train R² vs Test R² at increasing regularization strength):**
+
 ### Run it locally
 ```bash
 cd day2_logistic_regression
