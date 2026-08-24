@@ -87,9 +87,31 @@ better to unseen data. This is the bias-variance tradeoff made visible.
 
 ![results](plots/day3_overfitting_regularization.png)
 
+## Day 4 — Decision Trees
+
+Implemented a decision tree from scratch using entropy and
+information gain for recursive greedy splitting — a fundamentally
+different optimization approach than the gradient-based models in
+Days 1-3.
+
+
+
+**Decision boundary** — note the blocky, axis-aligned regions,
+very different from logistic regression's straight diagonal line:
+
+![boundary](plots/day4_decision_tree_boundary.png)
+
+**Bias-variance tradeoff via tree depth** — train accuracy climbs
+toward 100% as depth increases, while test accuracy peaks then
+plateaus or drops, the same overfitting pattern seen in Day 3 with
+regularization, but through a different mechanism (depth vs. lambda):
+
+![depth](plots/day4_depth_vs_accuracy.png)
+
 ### Run it locally
 ```bash
-cd day2_logistic_regression
+cd day4_decision_trees
 python train_and_compare.py
-python -m pytest test_logistic_regression.py -v
+python depth_experiment.py
+python -m pytest test_decision_tree.py -v
 ```
