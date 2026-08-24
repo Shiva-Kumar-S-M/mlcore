@@ -22,9 +22,9 @@ a trusted library.
 | Day | Algorithm | Status |
 |---|---|---|
 | 1 | Linear Regression (Gradient Descent) | ✅ Done |
-| 2 | Logistic Regression — Sigmoid & Cross-Entropy Loss | ✅ |
-| 3 | Regularization — L1 / L2, Bias-Variance Tradeoff | ✅ |
-| 4 | Decision Trees | 🔜 |
+| 2 | Logistic Regression — Sigmoid & Cross-Entropy Loss | ✅ Done |
+| 3 | Regularization — L1 / L2, Bias-Variance Tradeoff | ✅ Done |
+| 4 | Decision Trees — Entropy & Information Gain | ✅ Done|
 | 5 | Applied project: Credit Risk Prediction | 🔜 |
 | 6 | Neural Network from scratch (backprop) | 🔜 |
 | 7 | Model explainability + final write-up | 🔜 |
