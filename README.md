@@ -25,7 +25,7 @@ a trusted library.
 | 2 | Logistic Regression — Sigmoid & Cross-Entropy Loss | ✅ Done |
 | 3 | Regularization — L1 / L2, Bias-Variance Tradeoff | ✅ Done |
 | 4 | Decision Trees — Entropy & Information Gain | ✅ Done|
-| 5 | Applied project: Credit Risk Prediction | 🔜 |
+| 5 | Applied Project — Credit Risk Prediction | ✅ Done|
 | 6 | Neural Network from scratch (backprop) | 🔜 |
 | 7 | Model explainability + final write-up | 🔜 |
 
@@ -108,10 +108,34 @@ regularization, but through a different mechanism (depth vs. lambda):
 
 ![depth](plots/day4_depth_vs_accuracy.png)
 
+## Day 5 — Applied Project: Credit Risk Prediction
+
+Applied everything built in Days 1-4 to a real dataset: the UCI
+German Credit dataset (1000 loan applicants). This is where the
+gap between "works on clean synthetic data" and "works on real,
+messy data" gets tested directly.
+
+**Pipeline:**
+1. Downloaded raw data with mixed categorical/numeric features
+2. One-hot encoded categoricals, standardized numeric features
+3. Ran our from-scratch Logistic Regression and Decision Tree
+   against sklearn equivalents on identical train/test splits
+
+**Result:**
+
+The dataset has real class imbalance (~70/30 good/bad credit risk),
+which is why F1 and ROC-AUC are reported alongside accuracy rather
+than relying on accuracy alone — directly applying the Day 2 lesson
+on a genuine dataset instead of synthetic data.
+
+**Model comparison:**
+
+![comparison](plots/day5_model_comparison.png)
+
 ### Run it locally
 ```bash
-cd day4_decision_trees
-python train_and_compare.py
-python depth_experiment.py
-python -m pytest test_decision_tree.py -v
-```
+cd day5_applied_project
+python download_data.py
+python preprocess.py
+python run_all_models.py
+python -m pytest test_pipeline.py -v
