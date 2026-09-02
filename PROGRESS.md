@@ -123,3 +123,34 @@ overfit/underfit differently than linear models.
 **Next (Day 5):** Apply everything so far to a real dataset
 (credit risk prediction) and compare all models side by side on
 real, messy data.
+## Day 5 — Applied Project: Credit Risk Prediction ✅
+
+**Built:**
+- `download_data.py`: fetches the UCI German Credit dataset (1000
+  real loan applicants).
+- `preprocess.py`: one-hot encodes categorical variables, standardizes
+  numeric features -- the real preprocessing work synthetic data
+  never requires.
+- `run_all_models.py`: runs our Logistic Regression (Day 2) and
+  Decision Tree (Day 4) against sklearn equivalents on real data,
+  compares via accuracy/precision/recall/F1/ROC-AUC.
+- `test_pipeline.py`: 3 unit tests validating clean, numeric,
+  binary-target output from preprocessing.
+
+**Key results:** [PASTE your actual results table from run_all_models.py console output here]
+
+**Concepts learned:**
+- Real data requires preprocessing (encoding, scaling) that clean
+  synthetic data hides -- this is most of practical ML work.
+- Feature scaling matters for gradient descent convergence speed
+  and stability.
+- Class imbalance is real here (~70/30 split), making F1/ROC-AUC
+  more meaningful than raw accuracy -- direct application of the
+  Day 2 lesson on a genuine dataset.
+- Comparing multiple model families side by side on the same data
+  is how model selection actually works in practice.
+
+**Next (Day 6):** Neural network from scratch -- backpropagation,
+building directly on the linear layer (`Xw+b`) from Day 1.
+
+---
