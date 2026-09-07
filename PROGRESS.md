@@ -150,7 +150,32 @@ real, messy data.
 - Comparing multiple model families side by side on the same data
   is how model selection actually works in practice.
 
-**Next (Day 6):** Neural network from scratch -- backpropagation,
-building directly on the linear layer (`Xw+b`) from Day 1.
+## Day 6 — Neural Network from Scratch ✅
 
----
+**Built:**
+- `neural_network.py`: 2-layer network (1 hidden layer) with ReLU
+  activation and manual backpropagation, reusing Day 1's linear
+  layer and Day 2's sigmoid/cross-entropy directly.
+- `train_and_compare.py`: compares logistic regression vs our NN vs
+  sklearn's MLPClassifier on non-linearly-separable moon-shaped data.
+- `test_neural_network.py`: 4 tests, including solving XOR -- the
+  classic proof that hidden layers add real representational power
+  beyond what any linear model can achieve.
+
+**Key results:** [PASTE accuracy numbers from console output]
+
+**Concepts learned:**
+- A neural network = stacked linear layers (Day 1) + nonlinearity
+  (ReLU) + Day 2's sigmoid/cross-entropy on the output.
+- Backpropagation is the chain rule applied layer by layer, working
+  backward from the output -- not new math, just Day 1/2's gradient
+  calculation chained together.
+- Why nonlinearity is required: stacking linear layers alone
+  collapses back into ONE linear equation, no extra power gained.
+- Why weights are randomly initialized (not zero, unlike Day 1) --
+  symmetry breaking, so hidden neurons learn different things.
+- XOR/moons data proves linear models have a hard mathematical
+  ceiling that hidden layers break through.
+
+**Next (Day 7):** Model explainability (feature importance) and
+final project write-up.
