@@ -26,7 +26,7 @@ a trusted library.
 | 3 | Regularization — L1 / L2, Bias-Variance Tradeoff | ✅ Done |
 | 4 | Decision Trees — Entropy & Information Gain | ✅ Done|
 | 5 | Applied Project — Credit Risk Prediction | ✅ Done|
-| 6 | Neural Network from scratch (backprop) | 🔜 |
+| 6 | Neural Network from Scratch — Manual Backpropagation | ✅ |
 | 7 | Model explainability + final write-up | 🔜 |
 
 ## Structure
@@ -132,10 +132,32 @@ on a genuine dataset instead of synthetic data.
 
 ![comparison](plots/day5_model_comparison.png)
 
+## Day 6 — Neural Network from Scratch
+
+Built a 2-layer neural network (1 hidden layer, ReLU activation) with
+manual backpropagation — directly reusing Day 1's linear layer and
+Day 2's sigmoid/cross-entropy, proving a neural network isn't a new
+concept but a composition of everything built earlier this week.
+
+**Result on non-linearly-separable data (moons dataset):**
+
+*(replace with actual numbers)*
+
+**Why this matters:** logistic regression's straight-line boundary
+cannot correctly separate the crescent-moon shapes below, while our
+network's curved boundary — enabled by the ReLU hidden layer — solves
+it just as well as sklearn's implementation:
+
+![comparison](plots/day6_neural_network_comparison.png)
+
+Also verified the network solves **XOR**, the textbook example proving
+a single linear model mathematically cannot separate certain patterns
+no matter how it's trained — a hidden layer is what breaks that ceiling.
+
 ### Run it locally
 ```bash
-cd day5_applied_project
-python download_data.py
-python preprocess.py
-python run_all_models.py
-python -m pytest test_pipeline.py -v
+cd day6_neural_network
+python train_and_compare.py
+python -m pytest test_neural_network.py -v
+```
+
