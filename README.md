@@ -26,8 +26,8 @@ a trusted library.
 | 3 | Regularization — L1 / L2, Bias-Variance Tradeoff | ✅ Done |
 | 4 | Decision Trees — Entropy & Information Gain | ✅ Done|
 | 5 | Applied Project — Credit Risk Prediction | ✅ Done|
-| 6 | Neural Network from Scratch — Manual Backpropagation | ✅ |
-| 7 | Model explainability + final write-up | 🔜 |
+| 6 | Neural Network from Scratch — Manual Backpropagation | ✅ Done |
+| 7 | Model Explainability & Final Write-Up | ✅ Done |
 
 ## Structure
 
@@ -153,11 +153,33 @@ it just as well as sklearn's implementation:
 Also verified the network solves **XOR**, the textbook example proving
 a single linear model mathematically cannot separate certain patterns
 no matter how it's trained — a hidden layer is what breaks that ceiling.
+## Day 7 — Model Explainability
+
+Added feature importance analysis on top of the Day 5 credit risk
+models — because a model that predicts well but can't explain why
+is often unusable in regulated domains like lending.
+
+**Top features (Logistic Regression vs Decision Tree):**
+
+![importance](plots/day7_feature_importance.png)
+
+Both explainability methods largely agree on the most influential
+features, which is stronger evidence of genuine signal than either
+method alone would provide.
+
+## Project Summary
+
+A 7-day, ground-up build of core machine learning algorithms —
+Linear Regression, Logistic Regression, Regularization (L1/L2),
+Decision Trees, and a Neural Network with manual backpropagation —
+implemented in raw NumPy, verified against scikit-learn, applied to
+a real credit risk dataset, and explained via feature importance.
+
+**20+ unit tests · 5 model families · benchmarked for correctness · applied to real data**
 
 ### Run it locally
 ```bash
-cd day6_neural_network
-python train_and_compare.py
-python -m pytest test_neural_network.py -v
+cd day7_explainability
+python explain_models.py
+python -m pytest test_explainability.py -v
 ```
-
