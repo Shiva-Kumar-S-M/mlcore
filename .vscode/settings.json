@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./day2_logistic_regression",
+        "./day4_decision_trees"
+    ]
+}
