@@ -177,5 +177,39 @@ real, messy data.
 - XOR/moons data proves linear models have a hard mathematical
   ceiling that hidden layers break through.
 
-**Next (Day 7):** Model explainability (feature importance) and
-final project write-up.
+## Day 7 — Model Explainability & Final Write-Up ✅
+
+**Built:**
+- `explain_models.py`: feature importance for Logistic Regression
+  (coefficient magnitude) and Decision Tree (entropy reduction),
+  compared side by side on the real credit risk data.
+- `test_explainability.py`: sanity-check test proving the importance
+  calculation correctly identifies a known informative feature over
+  pure noise.
+
+**Key results:** [PASTE your top features from console output]
+
+**Concepts learned:**
+- Explainability matters as much as accuracy in regulated/high-stakes
+  domains (credit, healthcare, hiring) -- "why" is often required,
+  not just "what."
+- Two different explainability methods (coefficient magnitude vs.
+  entropy reduction) agreeing on top features is stronger evidence
+  than either alone.
+- This closes the loop on the whole week: every model built (Days
+  1-6) can now not just predict, but explain itself.
+
+## Project Complete — Week Summary
+
+Built 5 core ML algorithms from scratch (Linear Regression, Logistic
+Regression, Regularization, Decision Trees, Neural Networks),
+verified each against scikit-learn, applied them to a real credit
+risk dataset, and added explainability on top. 12+ modular files,
+20+ unit tests, feature-branch git workflow with 70+ descriptive
+commits across the week.
+
+**Foundational insight carried through every day:** every model,
+no matter how different it looks on the surface, follows the same
+loop -- predict, measure loss, compute gradient (or best split),
+update. That loop is what deep learning and agentic AI systems
+build on next.
